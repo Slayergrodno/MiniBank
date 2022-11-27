@@ -1,5 +1,6 @@
 package logger;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,17 +11,20 @@ public class FileLogger implements Logger {
     private static final String LOG_FILE_PATH = "./resources/log.txt";
     private final Class clazz;
 
-    FileLogger(final Class clazz){//Убралм private, доступ только с класса!!!
+    FileLogger(final Class clazz) {
         this.clazz = clazz;
     }
+
     @Override
-    public void log(LogLevel level, String message) {
+    public void log(final LogLevel level, final String message) {
         try (FileWriter fileWriter = new FileWriter(LOG_FILE_PATH, true);
              PrintWriter printWriter = new PrintWriter(fileWriter)) {
+
+            // TODO Можно заменить MessageBuilder
             StringBuilder sb = new StringBuilder();
-            sb.append("[").append(level).append("]")
-                    .append("[").append(clazz).append("]")
-                    .append("[").append(LocalDateTime.now()).append("]")
+            sb.append("[").append(level).append("] ")
+                    .append("[").append(clazz).append("] ")
+                    .append("[").append(LocalDateTime.now()).append("] ")
                     .append(message);
 
             printWriter.println(sb);
@@ -30,27 +34,27 @@ public class FileLogger implements Logger {
     }
 
     @Override
-    public void debug(String message) {
+    public void debug(final String message) {
         log(LogLevel.DEBUG, message);
     }
 
     @Override
-    public void info(String message) {
+    public void info(final String message) {
         log(LogLevel.INFO, message);
     }
 
     @Override
-    public void warn(String message) {
+    public void warn(final String message) {
         log(LogLevel.WARN, message);
     }
 
     @Override
-    public void error(String message) {
+    public void error(final String message) {
         log(LogLevel.ERROR, message);
     }
 
     @Override
-    public void fatal(String message) {
+    public void fatal(final String message) {
         log(LogLevel.FATAL, message);
     }
 }

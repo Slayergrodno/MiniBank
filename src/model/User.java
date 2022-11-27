@@ -1,9 +1,9 @@
 package model;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class User {
+
     private Long id;
     private String userName;
     private String password;
@@ -16,8 +16,8 @@ public class User {
     public User() {
     }
 
-    public User(String userName, String password, String firstName, String lastName,
-                LocalDate birthDate, Sex sex, String email) {
+    public User(final String userName, final String password, final String firstName, final String lastName,
+                final LocalDate birthDate, final Sex sex, final String email) {
         this.userName = userName;
         this.password = password;
         this.firstName = firstName;
@@ -27,8 +27,8 @@ public class User {
         this.email = email;
     }
 
-    public User(Long id, String userName, String password, String firstName, String lastName,
-                LocalDate birthDate, Sex sex, String email) {
+    public User(final Long id, final String userName, final String password, final String firstName,
+                final String lastName, final LocalDate birthDate, final Sex sex, final String email) {
         this.id = id;
         this.userName = userName;
         this.password = password;
@@ -39,7 +39,7 @@ public class User {
         this.email = email;
     }
 
-    public boolean isNew(){
+    public boolean isNew() {
         return id == null;
     }
 
@@ -47,7 +47,7 @@ public class User {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 
@@ -55,7 +55,7 @@ public class User {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    public void setUserName(final String userName) {
         this.userName = userName;
     }
 
@@ -63,7 +63,7 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(final String password) {
         this.password = password;
     }
 
@@ -71,7 +71,7 @@ public class User {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(final String firstName) {
         this.firstName = firstName;
     }
 
@@ -79,7 +79,7 @@ public class User {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(final String lastName) {
         this.lastName = lastName;
     }
 
@@ -87,7 +87,7 @@ public class User {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate, DateTimeFormatter isoLocalDate) {
+    public void setBirthDate(final LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -95,7 +95,7 @@ public class User {
         return sex;
     }
 
-    public void setSex(Sex sex) {
+    public void setSex(final Sex sex) {
         this.sex = sex;
     }
 
@@ -103,7 +103,21 @@ public class User {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(final String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate=" + birthDate +
+                ", sex=" + sex +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

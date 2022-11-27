@@ -1,7 +1,8 @@
 package logger;
 
 public class LoggerFactory {
-    public static Logger getInstancy(Class clazz){
+
+    public static Logger getInstance(Class clazz) {
         return new FileLogger(clazz);
     }
 }

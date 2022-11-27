@@ -2,3 +2,14 @@
 [INFO][class Main][2022-11-21T19:32:38.583794900]Cute info message
 [DEBUG][class Main][2022-11-21T19:32:38.583794900]Cute debug message
 [WARN][class Main][2022-11-21T19:32:38.583794900]Cute warn message
+[DEBUG] [class repository.impl.FileUserRepository] [2022-11-27T13:28:18.251471100] Created empty UserIdCounter started with 0
+[DEBUG] [class repository.impl.FileUserRepository] [2022-11-27T13:28:35.151147900] Created empty UserIdCounter started with 0
+[DEBUG] [class repository.impl.FileUserRepository] [2022-11-27T13:28:52.753090600] Created empty UserIdCounter started with 0
+[INFO] [class ui.ConsoleInterface] [2022-11-27T13:29:46.659424900] Введены неверные данные
+[DEBUG] [class repository.impl.FileUserRepository] [2022-11-27T13:34:41.336298100] Created empty UserIdCounter started with 0
+[DEBUG] [class repository.impl.FileUserRepository] [2022-11-27T13:39:50.414848300] Generated new UserIdCounter value: 1
+[DEBUG] [class repository.impl.FileUserRepository] [2022-11-27T13:39:50.414848300] Saved new User "1,Slayer,123456,Serg,Iv,1984-06-04,M,Terribl@gmail.com"
+[INFO] [class ui.Session] [2022-11-27T13:39:50.416092600] Создана сессия с Slayer
+[DEBUG] [class repository.impl.FileUserRepository] [2022-11-27T13:40:13.415737500] Created UserIdCounter with initial value: 1
+[INFO] [class ui.Session] [2022-11-27T13:40:27.346880] Создана сессия с Slayer
+[INFO] [class ui.ConsoleInterface] [2022-11-27T13:40:27.346880] Успешный вход для Slayer
